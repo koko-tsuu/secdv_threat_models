@@ -30,14 +30,6 @@
             },
             "id": "fd0ae9c6-8c3c-4a75-9c42-68faba9240d4",
             "zIndex": 0,
-            "source": {
-              "cell": "a29e9d86-6086-4a58-aeff-893cb97f8ff3",
-              "port": "e194bc43-f217-443a-af22-57171f5d2b85"
-            },
-            "target": {
-              "x": 290,
-              "y": 370
-            },
             "data": {
               "type": "tm.Flow",
               "name": "Data Flow",
@@ -50,6 +42,14 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
+            },
+            "source": {
+              "cell": "a29e9d86-6086-4a58-aeff-893cb97f8ff3",
+              "port": "e194bc43-f217-443a-af22-57171f5d2b85"
+            },
+            "target": {
+              "x": 290,
+              "y": 370
             }
           },
           {
@@ -73,6 +73,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -156,7 +157,6 @@
               ]
             },
             "id": "ee6c13e5-7333-4c75-9bb1-c2235f49f6db",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web Application",
@@ -192,6 +192,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -275,7 +276,6 @@
               ]
             },
             "id": "42a2569e-87cf-47d8-b5cb-d8a170641e3f",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Browser",
@@ -308,6 +308,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -391,7 +392,6 @@
               ]
             },
             "id": "37d450b0-9232-4fd2-b3a2-100583f56940",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Authorization Provider",
@@ -427,6 +427,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -510,7 +511,6 @@
               ]
             },
             "id": "c035fd65-98ca-4ea2-8497-3e578c126859",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "LDAP",
@@ -549,6 +549,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -632,7 +633,6 @@
               ]
             },
             "id": "6973de32-6ca2-40cb-80c4-1aa1ac2420b3",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "SQL Database",
@@ -646,6 +646,102 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "d08a5c3e-67fb-48c0-b9a6-18be2ff74039",
+            "source": {
+              "x": 884,
+              "y": 20
+            },
+            "target": {
+              "x": 984,
+              "y": 120
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "edd3e8d1-1dc5-44b0-8825-ca0d712309d9",
+            "source": {
+              "x": 877,
+              "y": 320
+            },
+            "target": {
+              "x": 977,
+              "y": 420
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "82efaaf0-e77c-4c05-b643-99ab0e00e984",
+            "source": {
+              "x": 805,
+              "y": 277
+            },
+            "target": {
+              "x": 905,
+              "y": 377
             }
           }
         ]
