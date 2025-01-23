@@ -138,8 +138,8 @@
           },
           {
             "position": {
-              "x": 600,
-              "y": 90
+              "x": 940,
+              "y": 110
             },
             "size": {
               "width": 60,
@@ -257,8 +257,8 @@
           },
           {
             "position": {
-              "x": 570,
-              "y": 358
+              "x": 780,
+              "y": 440
             },
             "size": {
               "width": 120,
@@ -824,6 +824,62 @@
               {
                 "x": 300,
                 "y": 530
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "2e98d111-958f-4789-a99a-a17ce2b351e8",
+            "source": {
+              "x": 425,
+              "y": 225
+            },
+            "target": {
+              "x": 410,
+              "y": 360
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 290
               }
             ]
           },
