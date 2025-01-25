@@ -150,8 +150,8 @@
                 "text": "LDAP"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -247,12 +247,60 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "No Audit Logging",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "LDAP claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "Improper Data Protection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Improper data protection of LDAP can allow an attacker to read information not intended for disclosure. Review authorization settings. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "2880aa08-b6ca-4c5e-8d7a-d95ab797b2a9",
+                  "title": "External agent preventing access to data store",
+                  "status": "Open",
+                  "severity": "TBA",
+                  "type": "Denial of service",
+                  "description": "An external agent prevents access to a data store on the other side of the trust boundary.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -269,11 +317,13 @@
                 "text": "SQL Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -369,13 +419,59 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "No Audit Logging",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "The SQL Database claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "da8f306f-2c4a-414a-bc98-c1fdb9da9703",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBA",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 15,
+                  "score": ""
+                },
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "External agent preventing access to data store",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An external agent prevents access to a data store on the other side of the trust boundary.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             }
           },
           {
@@ -507,12 +603,25 @@
                   "new": false,
                   "number": 5,
                   "score": ""
+                },
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "No Audit Logging",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "The web application claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 2,
                 "tampering": 0,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -1005,89 +1114,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Insert Query with Feedback Comments",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "d9b396bd-eec1-418b-b7dc-13bce92376f6",
-                  "title": "SQL Injection",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "SQL injection is an attack in which malicious code is inserted into strings that are later passed  to an instance of SQL Server for parsing and execution.  ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 1,
-                  "score": ""
-                },
-                {
-                  "id": "b463399b-8b95-4254-9c15-894844648c61",
-                  "title": "Tampering of Feedback Comments",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Data flowing across saved feedback comments may be tampered with by an attacker. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved-list input validation approach.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Insert Query with Feedback Comments"
-            ],
-            "id": "c52f53e7-7519-45cc-9dbd-6ca298399d87",
-            "source": {
-              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
-              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
-            },
-            "target": {
-              "cell": "d3210f60-6930-47a1-98c6-7152cff491e6",
-              "port": "b6378823-46ba-472f-ab5b-0762e9800e54"
-            },
-            "vertices": [
-              {
-                "x": 990,
-                "y": 600
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -1279,6 +1305,102 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Insert Query with Feedback Comments",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d9b396bd-eec1-418b-b7dc-13bce92376f6",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "SQL injection is an attack in which malicious code is inserted into strings that are later passed  to an instance of SQL Server for parsing and execution.  ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "b463399b-8b95-4254-9c15-894844648c61",
+                  "title": "Tampering of Feedback Comments",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Data flowing across saved feedback comments may be tampered with by an attacker. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved-list input validation approach.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "No Data Encryption",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data flowing across saved feedback comments may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Insert Query with Feedback Comments"
+            ],
+            "id": "c52f53e7-7519-45cc-9dbd-6ca298399d87",
+            "source": {
+              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
+              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
+            },
+            "target": {
+              "cell": "d3210f60-6930-47a1-98c6-7152cff491e6",
+              "port": "b6378823-46ba-472f-ab5b-0762e9800e54"
+            },
+            "vertices": [
+              {
+                "x": 990,
+                "y": 600
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Insert Feedback Controls",
               "description": "",
               "outOfScope": false,
@@ -1301,11 +1423,24 @@
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "No Data Encryption",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data flowing across saved feedback comments may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 1,
-                "informationDisclosure": 0,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
@@ -1333,6 +1468,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 5
+    "threatTop": 16
   }
 }
