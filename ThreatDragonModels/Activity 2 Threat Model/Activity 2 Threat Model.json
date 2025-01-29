@@ -254,32 +254,6 @@
               "privilegeLevel": "",
               "threats": [
                 {
-                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
-                  "title": "No Audit Logging",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Repudiation",
-                  "description": "LDAP claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 8,
-                  "score": ""
-                },
-                {
-                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
-                  "title": "Improper Data Protection",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Improper data protection of LDAP can allow an attacker to read information not intended for disclosure. Review authorization settings. ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 8,
-                  "score": ""
-                },
-                {
                   "id": "2880aa08-b6ca-4c5e-8d7a-d95ab797b2a9",
                   "title": "External agent preventing access to data store",
                   "status": "Open",
@@ -291,13 +265,39 @@
                   "new": false,
                   "number": 14,
                   "score": ""
+                },
+                {
+                  "id": "6aecb52c-29d3-46d1-bfc0-8c0887121c69",
+                  "title": "Improper data protection",
+                  "status": "Open",
+                  "severity": "TBA",
+                  "type": "Information disclosure",
+                  "description": "Improper data protection of LDAP can allow an attacker to read information not intended for disclosure. Review authorization settings.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                },
+                {
+                  "id": "6de4a24c-70ca-44f6-a7c7-16e982d81433",
+                  "title": "No Audit Logging",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "LDAP claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 1,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
@@ -441,7 +441,7 @@
                 },
                 {
                   "id": "59e23970-4e61-4257-a949-fd18a99b7830",
-                  "title": "No audit logging",
+                  "title": "No Audit logging",
                   "status": "Open",
                   "severity": "TBA",
                   "type": "Repudiation",
@@ -455,7 +455,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 3,
+                "repudiation": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 2
               }
@@ -1117,56 +1117,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "User is Authenticated",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "User is Authenticated"
-            ],
-            "id": "2366b169-a486-4e41-bdef-2907d1a9a37c",
-            "source": {
-              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
-              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-            },
-            "target": {
-              "cell": "02cca628-7956-4dc3-b8d9-f3d7ef1ced01",
-              "port": "9b4d8749-d5ab-4068-a787-dfaa3f20d411"
-            },
-            "vertices": [
-              {
-                "x": 400,
-                "y": 600
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Feedback Comments Saved",
               "description": "",
               "outOfScope": false,
@@ -1198,76 +1148,6 @@
               {
                 "x": 350,
                 "y": 700
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Verifies the Privilege",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "efdb9c43-662d-4c97-9da4-5ee457a61846",
-                  "title": "LDAP Injection",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "LDAP injection is  possible, as the user authentication is verified using an LDAP query.  ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 2,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Verifies the Privilege"
-            ],
-            "id": "225704da-f8e2-4190-a4aa-cd0c01ba2553",
-            "source": {
-              "cell": "ec00006b-3258-4f68-bd15-3757b883d2cd",
-              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
-            },
-            "target": {
-              "cell": "182273e2-b57a-4e2a-9e8e-94bd7a7a55fb",
-              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-            },
-            "vertices": [
-              {
-                "x": 1010,
-                "y": 60
               }
             ]
           },
@@ -1448,6 +1328,126 @@
                 "x": 990,
                 "y": 600
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verifies the Privilege",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "efdb9c43-662d-4c97-9da4-5ee457a61846",
+                  "title": "LDAP Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "LDAP injection is  possible, as the user authentication is verified using an LDAP query.  ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Verifies the Privilege"
+            ],
+            "id": "225704da-f8e2-4190-a4aa-cd0c01ba2553",
+            "source": {
+              "cell": "ec00006b-3258-4f68-bd15-3757b883d2cd",
+              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
+            },
+            "target": {
+              "cell": "182273e2-b57a-4e2a-9e8e-94bd7a7a55fb",
+              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
+            },
+            "vertices": [
+              {
+                "x": 1010,
+                "y": 60
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "User is Authenticated",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "User is Authenticated"
+            ],
+            "id": "2366b169-a486-4e41-bdef-2907d1a9a37c",
+            "source": {
+              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
+              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
+            },
+            "target": {
+              "cell": "02cca628-7956-4dc3-b8d9-f3d7ef1ced01",
+              "port": "9b4d8749-d5ab-4068-a787-dfaa3f20d411"
+            },
+            "vertices": [
+              {
+                "x": 400,
+                "y": 600
+              }
             ],
             "tools": {
               "items": [
@@ -1465,6 +1465,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 21
+    "threatTop": 23
   }
 }
