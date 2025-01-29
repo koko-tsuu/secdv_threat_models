@@ -427,50 +427,37 @@
               "storesInventory": false,
               "threats": [
                 {
-                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
-                  "title": "No Audit Logging",
+                  "id": "a9c898cb-fd8d-463e-aab2-00f50d8a0d45",
+                  "title": "External agent preventing access to data store",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "TBA",
+                  "type": "Denial of service",
+                  "description": "An external agent prevents access to a data store on the other side of the trust boundary. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "59e23970-4e61-4257-a949-fd18a99b7830",
+                  "title": "No audit logging",
+                  "status": "Open",
+                  "severity": "TBA",
                   "type": "Repudiation",
                   "description": "The SQL Database claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data. ",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 8,
-                  "score": ""
-                },
-                {
-                  "id": "da8f306f-2c4a-414a-bc98-c1fdb9da9703",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBA",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 15,
-                  "score": ""
-                },
-                {
-                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
-                  "title": "External agent preventing access to data store",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Denial of service",
-                  "description": "An external agent prevents access to a data store on the other side of the trust boundary.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 8,
+                  "number": 21,
                   "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 2,
+                "repudiation": 3,
                 "informationDisclosure": 0,
-                "denialOfService": 1
+                "denialOfService": 2
               }
             }
           },
@@ -1114,6 +1101,110 @@
             "shape": "flow",
             "attrs": {
               "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "User is Authenticated",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "User is Authenticated"
+            ],
+            "id": "2366b169-a486-4e41-bdef-2907d1a9a37c",
+            "source": {
+              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
+              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
+            },
+            "target": {
+              "cell": "02cca628-7956-4dc3-b8d9-f3d7ef1ced01",
+              "port": "9b4d8749-d5ab-4068-a787-dfaa3f20d411"
+            },
+            "vertices": [
+              {
+                "x": 400,
+                "y": 600
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Feedback Comments Saved",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Feedback Comments Saved"
+            ],
+            "id": "761344ea-f5a4-40b2-a766-6c9a2040c17d",
+            "source": {
+              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
+              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
+            },
+            "target": {
+              "cell": "02cca628-7956-4dc3-b8d9-f3d7ef1ced01",
+              "port": "9b4d8749-d5ab-4068-a787-dfaa3f20d411"
+            },
+            "vertices": [
+              {
+                "x": 470,
+                "y": 700
+              },
+              {
+                "x": 350,
+                "y": 700
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
                 "stroke": "red",
                 "strokeWidth": 2.5,
                 "targetMarker": {
@@ -1184,7 +1275,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1200,37 +1292,65 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Feedback Comments Saved",
+              "name": "Insert Feedback Controls",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e378e8cd-4975-4661-9ba8-afd430c2a558",
+                  "title": "Tampering of Feedback Comments",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Data flowing across saved feedback comments may be tampered with by an attacker. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved-list input validation approach.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
+                  "title": "No Data Encryption",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data flowing across saved feedback comments may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Feedback Comments Saved"
+              "Insert Feedback Controls"
             ],
-            "id": "761344ea-f5a4-40b2-a766-6c9a2040c17d",
+            "id": "a7447ff3-d2be-400f-8391-56855be432bd",
             "source": {
-              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
-              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-            },
-            "target": {
               "cell": "02cca628-7956-4dc3-b8d9-f3d7ef1ced01",
               "port": "9b4d8749-d5ab-4068-a787-dfaa3f20d411"
             },
+            "target": {
+              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
+              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
+            },
             "vertices": [
               {
-                "x": 470,
-                "y": 700
-              },
-              {
-                "x": 350,
-                "y": 700
+                "x": 410,
+                "y": 650
               }
             ]
           },
@@ -1328,146 +1448,23 @@
                 "x": 990,
                 "y": 600
               }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Insert Feedback Controls",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "e378e8cd-4975-4661-9ba8-afd430c2a558",
-                  "title": "Tampering of Feedback Comments",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Data flowing across saved feedback comments may be tampered with by an attacker. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved-list input validation approach.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 4,
-                  "score": ""
-                },
-                {
-                  "id": "5e197021-617c-4fce-86a4-ac51899cbbe7",
-                  "title": "No Data Encryption",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Data flowing across saved feedback comments may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 8,
-                  "score": ""
-                }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
               ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Insert Feedback Controls"
-            ],
-            "id": "a7447ff3-d2be-400f-8391-56855be432bd",
-            "source": {
-              "cell": "02cca628-7956-4dc3-b8d9-f3d7ef1ced01",
-              "port": "9b4d8749-d5ab-4068-a787-dfaa3f20d411"
-            },
-            "target": {
-              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
-              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-            },
-            "vertices": [
-              {
-                "x": 410,
-                "y": 650
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "User is Authenticated",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "User is Authenticated"
-            ],
-            "id": "2366b169-a486-4e41-bdef-2907d1a9a37c",
-            "source": {
-              "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
-              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-            },
-            "target": {
-              "cell": "02cca628-7956-4dc3-b8d9-f3d7ef1ced01",
-              "port": "9b4d8749-d5ab-4068-a787-dfaa3f20d411"
-            },
-            "vertices": [
-              {
-                "x": 400,
-                "y": 600
-              }
-            ]
+              "name": null
+            }
           }
         ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 16
+    "threatTop": 21
   }
 }
