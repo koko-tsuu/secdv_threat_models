@@ -138,173 +138,6 @@
           },
           {
             "position": {
-              "x": 1270,
-              "y": 90
-            },
-            "size": {
-              "width": 130,
-              "height": 130
-            },
-            "attrs": {
-              "text": {
-                "text": "LDAP"
-              },
-              "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 2,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "55329285-b763-4511-afce-02f0d6d3df88"
-                },
-                {
-                  "group": "right",
-                  "id": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
-                },
-                {
-                  "group": "bottom",
-                  "id": "728001e0-7f4b-4339-b369-249892da0724"
-                },
-                {
-                  "group": "left",
-                  "id": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-                }
-              ]
-            },
-            "id": "182273e2-b57a-4e2a-9e8e-94bd7a7a55fb",
-            "data": {
-              "type": "tm.Process",
-              "name": "LDAP",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": [
-                {
-                  "id": "2880aa08-b6ca-4c5e-8d7a-d95ab797b2a9",
-                  "title": "External agent preventing access to data store",
-                  "status": "Open",
-                  "severity": "TBA",
-                  "type": "Denial of service",
-                  "description": "An external agent prevents access to a data store on the other side of the trust boundary.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 14,
-                  "score": ""
-                },
-                {
-                  "id": "6aecb52c-29d3-46d1-bfc0-8c0887121c69",
-                  "title": "Improper data protection",
-                  "status": "Open",
-                  "severity": "TBA",
-                  "type": "Information disclosure",
-                  "description": "Improper data protection of LDAP can allow an attacker to read information not intended for disclosure. Review authorization settings.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 22,
-                  "score": ""
-                },
-                {
-                  "id": "6de4a24c-70ca-44f6-a7c7-16e982d81433",
-                  "title": "No Audit Logging",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Repudiation",
-                  "description": "LDAP claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 23,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "spoofing": 0,
-                "tampering": 0,
-                "repudiation": 1,
-                "informationDisclosure": 2,
-                "denialOfService": 1,
-                "elevationOfPrivilege": 0
-              }
-            }
-          },
-          {
-            "position": {
               "x": 1160,
               "y": 620
             },
@@ -1017,56 +850,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Verified",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Verified"
-            ],
-            "id": "ab6d185d-b774-48c2-8928-a632cb4a1e79",
-            "source": {
-              "cell": "182273e2-b57a-4e2a-9e8e-94bd7a7a55fb",
-              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-            },
-            "target": {
-              "cell": "ec00006b-3258-4f68-bd15-3757b883d2cd",
-              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
-            },
-            "vertices": [
-              {
-                "x": 1000,
-                "y": 190
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "User is Authenticated",
               "description": "",
               "outOfScope": false,
@@ -1198,76 +981,6 @@
               {
                 "x": 970,
                 "y": 730
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Verifies the Privilege",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "efdb9c43-662d-4c97-9da4-5ee457a61846",
-                  "title": "LDAP Injection",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "LDAP injection is  possible, as the user authentication is verified using an LDAP query.  ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 2,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Verifies the Privilege"
-            ],
-            "id": "225704da-f8e2-4190-a4aa-cd0c01ba2553",
-            "source": {
-              "cell": "ec00006b-3258-4f68-bd15-3757b883d2cd",
-              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
-            },
-            "target": {
-              "cell": "182273e2-b57a-4e2a-9e8e-94bd7a7a55fb",
-              "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
-            },
-            "vertices": [
-              {
-                "x": 1010,
-                "y": 60
               }
             ]
           },
@@ -1443,12 +1156,6 @@
               "cell": "b6027267-7d33-4189-80ed-d9584f89105d",
               "port": "e128fd61-30ed-4e3e-80c5-6d01587e3193"
             },
-            "vertices": [
-              {
-                "x": 410,
-                "y": 650
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -1458,6 +1165,310 @@
                 "target-arrowhead"
               ],
               "name": null
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 650
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verifies the Privilege",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "efdb9c43-662d-4c97-9da4-5ee457a61846",
+                  "title": "LDAP Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "LDAP injection is  possible, as the user authentication is verified using an LDAP query.  ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Verifies the Privilege"
+            ],
+            "id": "225704da-f8e2-4190-a4aa-cd0c01ba2553",
+            "source": {
+              "cell": "ec00006b-3258-4f68-bd15-3757b883d2cd",
+              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
+            },
+            "target": {
+              "cell": "2ac1c538-3cc3-4425-822d-5c9d25287aca",
+              "port": "e9471c8e-3b86-4e00-be0a-94f337ffe6fa"
+            },
+            "vertices": [
+              {
+                "x": 1010,
+                "y": 60
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verified",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Verified"
+            ],
+            "id": "ab6d185d-b774-48c2-8928-a632cb4a1e79",
+            "source": {
+              "cell": "2ac1c538-3cc3-4425-822d-5c9d25287aca",
+              "port": "e9471c8e-3b86-4e00-be0a-94f337ffe6fa"
+            },
+            "target": {
+              "cell": "ec00006b-3258-4f68-bd15-3757b883d2cd",
+              "port": "9f14dfd6-78e0-41a8-8569-8745ac3eeba6"
+            },
+            "vertices": [
+              {
+                "x": 1000,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 1280,
+              "y": 100
+            },
+            "size": {
+              "width": 180,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "LDAP"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a3d53dcf-6020-4e02-b844-81d5520bfd8f"
+                },
+                {
+                  "group": "right",
+                  "id": "b43ebe77-fbc2-4e97-a2c9-734d10824ba2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "69caa604-7c05-4634-8367-49fb11434622"
+                },
+                {
+                  "group": "left",
+                  "id": "e9471c8e-3b86-4e00-be0a-94f337ffe6fa"
+                }
+              ]
+            },
+            "id": "2ac1c538-3cc3-4425-822d-5c9d25287aca",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "LDAP",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "59ae0fcd-b7f7-4242-920c-32bfd2f13e43",
+                  "title": "External agent preventing access to data store",
+                  "status": "Open",
+                  "severity": "TBA",
+                  "type": "Denial of service",
+                  "description": "An external agent prevents access to a data store on the other side of the trust boundary.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                },
+                {
+                  "id": "91ecddcb-e01f-4690-bb1d-d159b11087cf",
+                  "title": "Improper data protection",
+                  "status": "Open",
+                  "severity": "TBA",
+                  "type": "Information disclosure",
+                  "description": "Improper data protection of LDAP can allow an attacker to read information not intended for disclosure. Review authorization settings.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                },
+                {
+                  "id": "3a6d0a8a-1294-4591-ac57-ffad497be80d",
+                  "title": "No Audit Logging",
+                  "status": "Open",
+                  "severity": "TBA",
+                  "type": "Repudiation",
+                  "description": "LDAP claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time and a summary of the received data.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 2,
+                "informationDisclosure": 2,
+                "denialOfService": 2
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           }
         ]
@@ -1465,6 +1476,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 25
+    "threatTop": 28
   }
 }
